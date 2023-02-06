@@ -1,15 +1,10 @@
 import React from "react";
-import Quote from "./Quote";
-import Image from "./Image";
-import Name from "./Name";
-import Likes from "./Likes";
-import { useSelector, useDispatch } from "react-redux";
-import { REMOVE_CHARACTER } from "../redux/types";
+import Character from "./Character";
+import { useSelector } from "react-redux";
 
 const Characters = () => {
   const simpsons = useSelector((state) => state.simpsons);
   const sort = useSelector((state) => state.sort);
-  const dispatch = useDispatch();
   let searchInput = useSelector((state) => state.search);
   let copy = simpsons;
 
@@ -55,42 +50,7 @@ const Characters = () => {
     });
   }
 
-  return copy.map((simpson) => {
-    return (
-      <div key={simpson.quote} className="quote">
-        <div>
-          <Name simpson={simpson} />
-        </div>
-        <div>
-          <Image simpson={simpson} />
-        </div>
-        <div>
-          <Quote simpson={simpson} />
-        </div>
-        <h2>
-          <button
-            onClick={() =>
-              dispatch({
-                type: REMOVE_CHARACTER,
-                payload: simpson.quote,
-              })
-            }
-          >
-            Remove
-          </button>
-        </h2>
-        <Likes simpson={simpson} key={simpson.quote} />
-      </div>
-    );
-  });
+  return copy.map((simpson) => <Character simpson={simpson} />);
 };
 
 export default Characters;
-
-// class Characters extends Component {
-//   render() {
-
-// function mapStateToProps(state) {
-//   return { simpsons: state.simpsons, sort: state.sort };
-// }
-// export default connect(mapStateToProps)(Characters);

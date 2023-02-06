@@ -64,17 +64,4 @@ const Interface = () => {
 
 export default Interface;
 
-// class Interface extends Component {
-//   render() {
-//     let count = 0;
-//     this.props.simpsons.forEach((simpson) => {
-//       if (simpson.liked) {
-//         count++;
-//       }
-//     });
 
-//
-// function mapStateToProps(state) {
-//   return { simpsons: state.simpsons };
-// }
-// export default connect(mapStateToProps)(Interface);

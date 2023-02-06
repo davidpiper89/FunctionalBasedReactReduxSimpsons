@@ -1,7 +1,9 @@
 import React from "react";
 
-const Quote = (simpson) => {
-  return <>{simpson.simpson.quote}</>;
+const Quote = (character) => {
+  return <>{character.character.quote}</>;
 };
 
 export default Quote;
+
+

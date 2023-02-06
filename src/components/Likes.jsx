@@ -2,19 +2,20 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { SET_LIKED_CHARACTER } from "../redux/types";
 
-const Likes = (simpson) => {
-  const dispatch = useDispatch()
+const Likes = (character) => {
+  const dispatch = useDispatch();
+  console.log(character);
   return (
     <h2>
       <button
         onClick={() =>
           dispatch({
             type: SET_LIKED_CHARACTER,
-            payload: simpson.simpson.quote,
+            payload: character.character.quote,
           })
         }
       >
-        Like?
+        {character.character.liked === true ? "Liked" : "Like?"}
       </button>
     </h2>
   );

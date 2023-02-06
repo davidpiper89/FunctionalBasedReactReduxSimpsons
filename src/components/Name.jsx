@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class Name extends Component {
-    
-    render() { 
-        
-        return (<>    
-            {this.props.simpson.character}
-            </>  );
-    }
-}
- 
+const Name = (character) => {
+  return <>{character.character.character}</>;
+};
+
 export default Name;
