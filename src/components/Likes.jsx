@@ -4,7 +4,6 @@ import { SET_LIKED_CHARACTER } from "../redux/types";
 
 const Likes = (character) => {
   const dispatch = useDispatch();
-  console.log(character);
   return (
     <h2>
       <button

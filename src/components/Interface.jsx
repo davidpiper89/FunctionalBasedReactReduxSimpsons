@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Characters from "./Characters";
 import {
@@ -18,6 +18,13 @@ const Interface = () => {
     }
   });
 
+  const inputRef = useRef();
+  const inputRef1 = useRef();
+  const onButtonClick = () => {
+    inputRef.current.value = "";
+    inputRef1.current.value = "";
+  };
+
   return (
     <>
       <h1>Simpsons quotes</h1>
@@ -31,12 +38,13 @@ const Interface = () => {
         }}
       >
         Add Character:
-        <input type="text" name="newCharacterInput" />
+        <input ref={inputRef} type="text" name="newCharacterInput" />
         and quote:
-        <input type="text" name="newQuoteInput" />
+        <input ref={inputRef1} type="text" name="newQuoteInput" />
         <button
           onClick={() => {
             dispatch({ type: ADD_CHARACTER });
+            onButtonClick();
           }}
         >
           Add
@@ -63,5 +71,3 @@ const Interface = () => {
 };
 
 export default Interface;
-
-

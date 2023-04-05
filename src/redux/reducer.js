@@ -40,15 +40,23 @@ export function reducer(state = initialState, action) {
       return { ...state, [action.payload.name]: action.payload.value };
 
     case ADD_CHARACTER: {
-      const simpsons = [ ...state.simpsons ];
-      simpsons.push({
-        quote: state.newQuoteInput,
-        character: state.newCharacterInput,
-        image: "",
-        characterDirection: "Right",
-      });
-      return { ...state, simpsons };
+      const simpsons = [...state.simpsons];
+      const indexOf = state.simpsons.findIndex(
+        (item) => item.quote === state.newQuoteInput
+      );
+      if (indexOf > -1) {
+        return { ...state, simpsons };
+      } else {
+        simpsons.unshift({
+          quote: state.newQuoteInput,
+          character: state.newCharacterInput,
+          image: "",
+          characterDirection: "Right",
+        });
+        return { ...state, simpsons };
+      }
     }
+
     case SET_SCREEN_MODE: {
       return { ...state, screenMode: action.payload };
     }
