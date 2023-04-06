@@ -29,7 +29,7 @@ The following are the main components of the application:
 - **CharacterList**: A component that displays a list of Simpsons characters, with options to filter the list by name or occupation.
 - **CharacterCard**: A component that displays detailed information about a single Simpsons character, including their name, occupation, and image.
 
-##**Redux**
+## **Redux**
 
 The application uses the Redux library for state management. The Redux store contains three main slices of state: _characters_, _filters_, _user inputs_. The _characters_ slice contains an array of all the Simpsons characters, the _filters_ slice contains the current filter settings for the character list, while the _user inputs_ contains the user inputs to add a character and quote.
 
