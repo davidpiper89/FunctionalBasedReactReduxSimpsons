@@ -26,8 +26,8 @@ This will start a development server and open the application in your default we
 The following are the main components of the application:
 
 - **App**: The top-level component that renders the other components and provides access to the Redux store.
-- **CharacterList**: A component that displays a list of Simpsons characters, with options to filter the list by name or occupation.
-- **CharacterCard**: A component that displays detailed information about a single Simpsons character, including their name, occupation, and image.
+- **Characters**: A component that displays a list of Simpsons characters, with options to filter the list by name or occupation.
+- **Character**: A component that displays detailed information about a single Simpsons character, including their name, quote and image.
 
 ## **Redux**
 
