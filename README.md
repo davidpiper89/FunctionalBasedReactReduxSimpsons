@@ -31,8 +31,6 @@ The following are the main components of the application:
 
 ## **Redux**
 
-The application uses the Redux library for state management. The Redux store contains three main slices of state: _characters_, _sort_, _user inputs_. The _characters_ slice contains an array of all the Simpsons characters, the _sort_ slice contains the current filter settings for the character list, while _user inputs_ contains the user inputs to add a character and quote.
-
 The Redux store is connected to the React components using the useSelector and useDispatch hooks provided by the react-redux library. The useSelector hook is used to select specific slices of state from the Redux store, while the useDispatch hook is used to dispatch actions to update the state in the store.
 
 ## **API**
