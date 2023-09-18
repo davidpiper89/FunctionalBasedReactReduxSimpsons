@@ -31,8 +31,20 @@ The following are the main components of the application:
 
 ## **Redux**
 
-The App uses redux for state management and is connected to the components using the react redux library hooks, useSelector and useDispatch.
-Its maybe a bit overkill for a small app like this as it is quite heavy duty and more suited for much bigger apps. But in the bootcamp we initially prop drilled the state but evolved it into redux to prep us for our next big project.
+The App leverages Redux for state management, utilizing useSelector and useDispatch hooks from the react-redux library.
+
+_Action_
+-SET_SIMPSONS_API: Sets simpsons data from an API.
+-REMOVE_CHARACTER: Deletes a character using their quote.
+-SET_LIKED_CHARACTER: Toggles the 'liked' status of a character by quote.
+-SET_SEARCH_INPUT/SET_USER_INPUT: Updates input values.
+-ADD_CHARACTER: Adds a new character, prevents duplicates.
+-SET_SCREEN_MODE: Modifies the screen mode.
+-SORT_INPUT: Adjusts sorting input values.
+
+_Reducer_
+The reducer computes the new state depending on the received action type. It uses the findIndex method for array operations to ensure immutability.
+
 
 ## **API**
 
