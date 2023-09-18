@@ -31,12 +31,10 @@ The following are the main components of the application:
 
 ## **Redux**
 
-The Redux store is connected to the React components using the useSelector and useDispatch hooks provided by the react-redux library. The useSelector hook is used to select specific slices of state from the Redux store, while the useDispatch hook is used to dispatch actions to update the state in the store.
+The App uses redux for state management and is connected to the components using the react redux library hooks, useSelector and useDispatch.
+Its maybe a bit overkill for a small app like this as it is quite heavy duty and more suited for much bigger apps. But in the bootcamp we initially prop drilled the state but evolved it into redux to prep us for our next big project.
 
 ## **API**
 
 The application makes use of a Simpsons API to retrieve information about the characters. The API is accessed using the axios library, and the results are stored in the Redux store.
 
-## **Credits**
-
-This project was created by David Piper, based on the "React Redux with Hooks" course by Maximilian Schwarzmüller on Udemy. The Simpsons characters and related content are the property of 20th Century Fox Television.
